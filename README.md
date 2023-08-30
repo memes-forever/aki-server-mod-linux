@@ -21,4 +21,4 @@ Before run server, change ip in *run.sh* (`DEFAULT_IP=x.x.x.x`)
 
 Works great on Rock PI 4A \
 https://wiki.radxa.com/Rock4 \
-![alt text](https://wiki.radxa.com/mw/images/thumb/e/e9/ROCK_4AB.gif/300px-ROCK_4AB.gif)
+![rock pi4a](https://wiki.radxa.com/mw/images/thumb/e/e9/ROCK_4AB.gif/300px-ROCK_4AB.gif)
