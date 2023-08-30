@@ -34,7 +34,8 @@ before using in console: `chmod +x ./run.sh`
 
 ### Cron example
 
-* Run server `55 11 * * * cd /home/xxxx/server && ./run.sh kill && ./run.sh server_d`
+* Kill server every day `55 10 * * * cd /home/xxxx/server && ./run.sh kill`
+* Run server every 15 min, if not run `*/15 * * * * cd /home/xxxx/server && ./run.sh server_d`
 * Run backup `1 * * * * cd /home/xxxx/server && ./run.sh backup_profiles`
 
 ***
