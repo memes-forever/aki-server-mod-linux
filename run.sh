@@ -204,19 +204,38 @@ if [ "$ARGS1" = "node_install" ]; then
     sleep 60
     echo "Start server. Enjoy! log in $LOG_FILE"
 
+  elif [ "$ARGS1" = "backup_profiles" ]; then
+
+    mkdir -p ./backup_profiles
+    tar czvf ./backup_profiles/backup-$(date +%Y-%m-%d.%H).tar $APP_FOLDER/user/profiles
+
+  elif [ "$ARGS1" = "backup_list" ]; then
+
+    ls ./backup_profiles
+
+  elif [ "$ARGS1" = "backup_restore" ]; then
+
+    tar -xvzf ./backup_profiles/$ARGS2 -C ./
+
   else
 	
-    echo "For install node ./run.sh node_install"
-    echo "For install zerotier ./run.sh zerotier_install"
-    echo "For join zerotier ./run.sh zerotier_join <hash_server>"
-    echo "For build server ./run.sh build"
-    echo "For build coop mod ./run.sh build_coop"
-    echo "For fix server mod files ./run.sh mods_fix"
+    echo "install node ./run.sh node_install"
+    echo "install zerotier ./run.sh zerotier_install"
+    echo "join zerotier ./run.sh zerotier_join <hash_server>"
+    echo "------"
+    echo "build server ./run.sh build"
+    echo "build coop mod ./run.sh build_coop"
+    echo "fix server mod files ./run.sh mods_fix"
+    echo "------"
     echo "Before run server, change ip in ./run.sh (DEFAULT_IP=)"
-    echo "For run server ./run.sh server"
-    echo "For run server in background ./run.sh server_d"
-    echo "For status server ./run.sh status"
-    echo "For kill server  ./run.sh kill"
+    echo "run server ./run.sh server"
+    echo "run server in background ./run.sh server_d"
+    echo "status server ./run.sh status"
+    echo "kill server  ./run.sh kill"
+    echo "------"
+    echo "backup profiles  ./run.sh backup_profiles"
+    echo "backup list  ./run.sh backup_list"
+    echo "unzip profiles  ./run.sh backup_restore backup-<date>.tar"
 
 fi
 
