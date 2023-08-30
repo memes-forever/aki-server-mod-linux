@@ -211,7 +211,7 @@ if [ "$ARGS1" = "node_install" ]; then
 
   elif [ "$ARGS1" = "backup_list" ]; then
 
-    ls ./backup_profiles
+    ls -t ./backup_profiles
 
   elif [ "$ARGS1" = "backup_restore" ]; then
 
